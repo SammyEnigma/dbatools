@@ -428,6 +428,7 @@ function Sync-DbaAvailabilityGroup {
                 Write-ProgressHelper -Activity $activity -StepNumber ($stepCounter++) -Message "Syncing login permissions"
                 Sync-DbaLoginPermission -Source $server -Destination $secondaries -Login $Login -ExcludeLogin $ExcludeLogin
             }
+            Write-ProgressHelper -Activity $activity -Completed
         }
     }
 }

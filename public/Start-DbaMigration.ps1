@@ -630,6 +630,7 @@ function Start-DbaMigration {
                 Write-Message -Level Verbose -Message "Skipping SSIS catalog migration because the source instance does not have an SSISDB catalog."
             }
         }
+        Write-ProgressHelper -Completed
     }
     end {
         if ($dacOpened) {
